@@ -1,0 +1,201 @@
+/* Anoma Official Theme */
+:root {
+  /* Anoma Brand Colors */
+  --anoma-red: #FF4444;
+  --anoma-red-dark: #E63946;
+  --anoma-red-light: #FF6B6B;
+  --anoma-accent: #A8E6CF;
+  --anoma-accent-bright: #88D8A3;
+  --anoma-black: #1A1A1A;
+  --anoma-gray-dark: #2D2D2D;
+  --anoma-gray: #6B7280;
+  --anoma-gray-light: #F3F4F6;
+  --anoma-white: #FFFFFF;
+  
+  /* Geometric patterns */
+  --anoma-border-radius: 8px;
+  --anoma-border-radius-lg: 12px;
+  
+  /* Shadows */
+  --anoma-shadow: 0 4px 6px -1px rgba(255, 68, 68, 0.1), 0 2px 4px -1px rgba(255, 68, 68, 0.06);
+  --anoma-shadow-lg: 0 10px 15px -3px rgba(255, 68, 68, 0.1), 0 4px 6px -2px rgba(255, 68, 68, 0.05);
+}
+
+/* Override default colors */
+.anoma-theme {
+  --primary: var(--anoma-red);
+  --primary-foreground: var(--anoma-white);
+  --secondary: var(--anoma-accent);
+  --secondary-foreground: var(--anoma-black);
+  --accent: var(--anoma-accent-bright);
+  --accent-foreground: var(--anoma-black);
+  --background: var(--anoma-white);
+  --foreground: var(--anoma-black);
+  --muted: var(--anoma-gray-light);
+  --muted-foreground: var(--anoma-gray);
+  --border: #E5E7EB;
+  --input: var(--anoma-gray-light);
+  --ring: var(--anoma-red);
+}
+
+/* Anoma geometric background pattern */
+.anoma-bg-pattern {
+  background-image: 
+    linear-gradient(45deg, rgba(255, 68, 68, 0.03) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 68, 68, 0.03) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 68, 68, 0.03) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255, 68, 68, 0.03) 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+/* Anoma gradient */
+.anoma-gradient {
+  background: linear-gradient(135deg, var(--anoma-red) 0%, var(--anoma-red-dark) 100%);
+}
+
+/* Anoma accent gradient */
+.anoma-accent-gradient {
+  background: linear-gradient(135deg, var(--anoma-accent) 0%, var(--anoma-accent-bright) 100%);
+}
+
+/* Custom button styles */
+.btn-anoma-primary {
+  background: var(--anoma-red);
+  color: var(--anoma-white);
+  border: none;
+  border-radius: var(--anoma-border-radius);
+  transition: all 0.2s ease;
+}
+
+.btn-anoma-primary:hover {
+  background: var(--anoma-red-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--anoma-shadow-lg);
+}
+
+.btn-anoma-secondary {
+  background: var(--anoma-accent);
+  color: var(--anoma-black);
+  border: none;
+  border-radius: var(--anoma-border-radius);
+  transition: all 0.2s ease;
+}
+
+.btn-anoma-secondary:hover {
+  background: var(--anoma-accent-bright);
+  transform: translateY(-1px);
+}
+
+/* Card styles */
+.card-anoma {
+  background: var(--anoma-white);
+  border: 1px solid rgba(255, 68, 68, 0.1);
+  border-radius: var(--anoma-border-radius-lg);
+  box-shadow: var(--anoma-shadow);
+  transition: all 0.2s ease;
+}
+
+.card-anoma:hover {
+  box-shadow: var(--anoma-shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Sidebar styles */
+.sidebar-anoma {
+  background: linear-gradient(180deg, var(--anoma-white) 0%, rgba(255, 68, 68, 0.02) 100%);
+  border-right: 1px solid rgba(255, 68, 68, 0.1);
+}
+
+/* Header styles */
+.header-anoma {
+  background: var(--anoma-white);
+  border-bottom: 1px solid rgba(255, 68, 68, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Navigation active state */
+.nav-active {
+  background: linear-gradient(135deg, var(--anoma-red) 0%, var(--anoma-red-dark) 100%);
+  color: var(--anoma-white);
+}
+
+.nav-active svg {
+  color: var(--anoma-white) !important;
+}
+
+/* Status indicators */
+.status-live {
+  background: var(--anoma-accent-bright);
+  color: var(--anoma-black);
+}
+
+.status-success {
+  background: var(--anoma-accent);
+  color: var(--anoma-black);
+}
+
+.status-error {
+  background: var(--anoma-red);
+  color: var(--anoma-white);
+}
+
+.status-warning {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+/* Geometric decorations */
+.anoma-diamond {
+  width: 12px;
+  height: 12px;
+  background: var(--anoma-red);
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+
+.anoma-diamond-accent {
+  width: 8px;
+  height: 8px;
+  background: var(--anoma-accent-bright);
+  transform: rotate(45deg);
+  border-radius: 1px;
+}
+
+/* Typography */
+.text-anoma-primary {
+  color: var(--anoma-red);
+}
+
+.text-anoma-accent {
+  color: var(--anoma-accent-bright);
+}
+
+.text-anoma-black {
+  color: var(--anoma-black);
+}
+
+/* Loading animations */
+.anoma-pulse {
+  animation: anoma-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes anoma-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Hover effects */
+.anoma-hover-lift {
+  transition: all 0.2s ease;
+}
+
+.anoma-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--anoma-shadow-lg);
+}
+
