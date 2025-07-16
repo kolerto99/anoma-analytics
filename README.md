@@ -130,10 +130,9 @@ All endpoints return JSON with real-time generated data following Anoma Protocol
 ## 🔧 Configuration
 
 ### Environment Variables
-
 **Frontend (.env.production):**
-```
-REACT_APP_API_URL=http://193.58.121.166:5000
+
+    VITE_API_URL=http://localhost:5000
 ```
 
 **Backend:**
